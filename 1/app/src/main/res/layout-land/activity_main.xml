@@ -1,0 +1,71 @@
+<!-- res/layout-land/activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_main_banner"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.38"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="welcome to CampusLife"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/headerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 横排按钮 -->
+    <LinearLayout
+        android:id="@+id/row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/headerImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/btnFacilities"
+            style="@style/MenuIcon"
+            android:tag="0"
+            android:layout_weight="1"
+            android:src="@drawable/ic_facilities"/>
+        <ImageButton
+            android:id="@+id/btnEvents"
+            style="@style/MenuIcon"
+            android:tag="1"
+            android:layout_weight="1"
+            android:src="@drawable/ic_events"/>
+        <ImageButton
+            android:id="@+id/btnClubs"
+            style="@style/MenuIcon"
+            android:tag="2"
+            android:layout_weight="1"
+            android:src="@drawable/ic_clubs"/>
+        <ImageButton
+            android:id="@+id/btnSupport"
+            style="@style/MenuIcon"
+            android:tag="3"
+            android:layout_weight="1"
+            android:src="@drawable/ic_support"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
