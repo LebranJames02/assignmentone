@@ -9,4 +9,8 @@
     <string name="btn_events_desc">活动功能按钮</string>
     <string name="btn_clubs_desc">社团功能按钮</string>
     <string name="btn_support_desc">支持服务按钮</string>
+    <!-- 在strings.xml中添加以下内容 -->
+    <string name="detail_title">Detail Page Title</string>
+    <string name="detail_content">This is the responsive content area. It will automatically scroll when content exceeds the screen height, and adapt to different screen sizes (phones/tablets) and orientations (portrait/landscape).</string>
+    <string name="detail_image_desc">Detail page display image</string>
 </resources>

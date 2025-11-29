@@ -1,32 +1,30 @@
 package com.example.assignmentone;
 
-import android.content.Intent;
+import android.content.Intent; // 已导入Intent相关类
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    // 用于Intent传递按钮索引的标识（全局常量）
+    // 用于Intent传递按钮索引的全局常量标识
     public static final String EXTRA_INDEX = "com.example.assignmentone.INDEX";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 设置当前Activity对应的布局文件
         setContentView(R.layout.activity_main);
     }
 
     /**
-     * 按钮点击事件处理方法（与布局中android:onClick绑定）
-     * 适配AGP 8.0+资源ID非final特性，使用if-else替代switch
+     * 按钮点击事件：处理Toast提示 + Intent跳转+数据传递
      */
     public void onButtonClick(View view) {
         String toastMessage = "";
         int buttonIndex = -1;
         int clickedViewId = view.getId();
 
-        // 根据点击的按钮ID，设置对应的提示语和索引
+        // 根据按钮ID匹配提示语与索引
         if (clickedViewId == R.id.btn_facilities) {
             toastMessage = "Facilities clicked";
             buttonIndex = 0;
@@ -41,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
             buttonIndex = 3;
         }
 
-        // 显示点击提示的Toast
+        // 显示点击提示
         Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
 
-        // 跳转到DetailActivity，并传递当前按钮的索引
+        // Intent跳转至DetailActivity + 传递按钮索引数据
         Intent detailIntent = new Intent(this, DetailActivity.class);
-        detailIntent.putExtra(EXTRA_INDEX, buttonIndex);
-        startActivity(detailIntent);
+        detailIntent.putExtra(EXTRA_INDEX, buttonIndex); // 传递索引数据
+        startActivity(detailIntent); // 启动DetailActivity
     }
 }
