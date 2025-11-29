@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 顶部Banner -->
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/img_main_banner"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/banner_desc"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_banner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/banner_title"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        app:layout_constraintTop_toTopOf="@id/iv_banner"
+        app:layout_constraintStart_toStartOf="@id/iv_banner"
+        app:layout_constraintEnd_toEndOf="@id/iv_banner"
+        app:layout_constraintBottom_toBottomOf="@id/iv_banner"/>
+
+    <!-- 图片按钮网格：2行2列 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        app:layout_constraintTop_toBottomOf="@id/iv_banner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.7">
+
+        <!-- Facilities按钮 -->
+        <ImageButton
+            android:id="@+id/btn_facilities"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_btn_facilities"
+            android:scaleType="fitCenter"
+            android:background="@drawable/btn_selector"
+            android:contentDescription="@string/btn_facilities_desc"
+            android:onClick="onButtonClick"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"/>
+
+        <!-- Events按钮 -->
+        <ImageButton
+            android:id="@+id/btn_events"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_btn_events"
+            android:scaleType="fitCenter"
+            android:background="@drawable/btn_selector"
+            android:contentDescription="@string/btn_events_desc"
+            android:onClick="onButtonClick"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"/>
+
+        <!-- Clubs按钮 -->
+        <ImageButton
+            android:id="@+id/btn_clubs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_btn_clubs"
+            android:scaleType="fitCenter"
+            android:background="@drawable/btn_selector"
+            android:contentDescription="@string/btn_clubs_desc"
+            android:onClick="onButtonClick"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"/>
+
+        <!-- Support按钮 -->
+        <ImageButton
+            android:id="@+id/btn_support"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_btn_support"
+            android:scaleType="fitCenter"
+            android:background="@drawable/btn_selector"
+            android:contentDescription="@string/btn_support_desc"
+            android:onClick="onButtonClick"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"/>
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

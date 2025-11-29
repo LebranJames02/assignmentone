@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CampusLife</string>
+    <!-- Banner相关 -->
+    <string name="banner_title">CampusLife - Your Pocket Guide to University of Waikato</string>
+    <string name="banner_desc">CampusLife首页横幅图</string>
+    <!-- 按钮描述 -->
+    <string name="btn_facilities_desc">设施功能按钮</string>
+    <string name="btn_events_desc">活动功能按钮</string>
+    <string name="btn_clubs_desc">社团功能按钮</string>
+    <string name="btn_support_desc">支持服务按钮</string>
+</resources>
