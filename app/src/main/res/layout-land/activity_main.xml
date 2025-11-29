@@ -1,0 +1,12 @@
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:rowCount="1"  <!-- 改为1行 -->
+    android:columnCount="4"  <!-- 改为4列 -->
+    android:alignmentMode="alignMargins"
+    android:columnOrderPreserved="false"
+    app:layout_constraintTop_toBottomOf="@id/iv_banner"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHeight_percent="0.7">
+    <!-- 四个ImageButton代码不变，布局权重自动适配 -->
+</GridLayout>
